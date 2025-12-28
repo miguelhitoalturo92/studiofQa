@@ -1,0 +1,172 @@
+/* Contenedor general */
+.galleryContainer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin: 2rem 0;
+}
+
+/* Banner principal */
+.mainBanner {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  display: block;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+/* Imagen de fondo */
+.bannerImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  z-index: 0;
+  transition: transform 0.6s ease-in-out;
+  transform: scale(0.95);
+}
+
+.mainBannerActive .bannerImage {
+  transform: scale(1.05);
+}
+
+/* Overlay oscuro */
+.bannerOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  z-index: 1;
+}
+
+/* Overlay de texto */
+.overlay {
+  position: absolute;
+  top: 15%;
+  left: 8%;
+  max-width: 500px;
+  color: #fff;
+  text-align: left;
+  z-index: 2;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.description {
+  font-size: 18px;
+}
+
+/* Contenedor de miniaturas con flechas */
+.thumbnailsWrapper {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 3;
+}
+
+/* Slider de miniaturas */
+.thumbnails {
+  overflow: hidden;
+  width: calc(90px * 3 + 24px); /* 3 miniaturas + espacios */
+}
+
+.thumbnails > div {
+  display: flex;
+  gap: 12px;
+  transition: transform 0.4s ease;
+}
+
+/* Miniaturas */
+.thumbnail {
+  flex-shrink: 0;
+  width: 90px;
+  height: 160px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.thumbnail:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.thumbnailActive {
+  border-color: #fff;
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+/* Flechas */
+.arrow {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.arrow:hover {
+  background: rgba(0,0,0,0.7);
+}
+
+.arrowLeft {
+  margin-right: 8px;
+}
+
+.arrowRight {
+  margin-left: 8px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .mainBanner { height: 500px; }
+  .title { font-size: 32px; }
+  .description { font-size: 16px; }
+  .thumbnails { width: calc(80px * 3 + 24px); }
+  .thumbnail { width: 80px; height: 140px; }
+  .arrow { width: 24px; height: 24px; font-size: 18px; }
+}
+
+@media (max-width: 768px) {
+  .mainBanner { height: 400px; }
+  .overlay { top: 10%; left: 5%; max-width: 300px; }
+  .title { font-size: 24px; }
+  .description { font-size: 14px; }
+  .thumbnails { width: calc(70px * 3 + 24px); }
+  .thumbnail { width: 70px; height: 120px; }
+  .arrow { width: 22px; height: 22px; font-size: 16px; }
+  .thumbnailsWrapper{
+    right: 0px;
+    left: 0px;
+    margin: auto;
+    justify-content: center;
+  }
+}

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useRuntime } from 'vtex.render-runtime'
 import { useCssHandles } from 'vtex.css-handles'
 import './styles.css'
@@ -25,6 +25,8 @@ const CSS_HANDLES = [
   'active',
 ] as const
 
+const AUTOPLAY_INTERVAL = 5000
+
 const ImageTitleSlider: React.FC<Props> = ({ slides }) => {
   const [activeIndex, setActiveIndex] = useState<number>(0)
   const { handles } = useCssHandles(CSS_HANDLES)
@@ -32,6 +34,15 @@ const ImageTitleSlider: React.FC<Props> = ({ slides }) => {
   const isMobile: boolean = Boolean(deviceInfo?.isMobile)
 
   if (!slides || slides.length === 0) return null
+
+  // Autoplay con loop infinito
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prevIndex) => (prevIndex + 1) % slides.length)
+    }, AUTOPLAY_INTERVAL)
+
+    return () => clearInterval(interval)
+  }, [slides.length])
 
   const currentSlide: Slide = slides[activeIndex]
 

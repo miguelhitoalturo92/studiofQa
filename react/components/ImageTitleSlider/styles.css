@@ -11,6 +11,7 @@ body,
 
 .dotsTop {
   display: flex;
+  font-family: 'Playfair Display', serif;
   justify-content: center;
   gap: 16px;
   margin-bottom: 16px;
@@ -22,6 +23,7 @@ body,
 }
 
 .dotButton {
+  font-family: 'Playfair Display', serif;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -47,6 +49,13 @@ body,
   max-width: 100%;
   height: auto;
   display: block;
+}
+.title-message {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  color: #4c2b08;
+  border-bottom: 2px solid #4c2b08; /* Borde inferior */
+  padding-bottom: 5px;               /* Separación del texto */
 }
 
 @media (max-width: 1080px) {

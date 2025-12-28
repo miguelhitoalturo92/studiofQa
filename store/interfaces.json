@@ -13,5 +13,25 @@
     "component": "CustomImageGrid",
      "allowed": "*",
     "composition": "children"
+  },
+  "image-showcase": {
+    "component": "ImageShowcase",
+     "allowed": "*",
+    "composition": "children"
+  },
+  "slider-gallery": {
+    "component": "InteractiveGallery",
+     "allowed": "*",
+    "composition": "children"
+  },
+  "banner-gallery": {
+    "component": "BannerGallery",
+     "allowed": "*",
+    "composition": "children"
+  },
+  "social-icons": {
+    "component": "SocialIcons",
+     "allowed": "*",
+    "composition": "children"
   }
 }

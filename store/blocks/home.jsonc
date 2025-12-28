@@ -1,15 +1,131 @@
 {
-  "store.home": { 
+  "store.home": {
     "blocks": [
-      "rich-text"
+     "flex-layout.row#home"
     ]
   },
-  "rich-text": { 
-    "props": { 
-      "text": "VTEX Store Framework",
+
+  "flex-layout.row#home": {
+    "props": {
+      "blockClass": "image-title-slider-row",
+      "flexLayout": "ROW",
+      "justifyContent": "CENTER",
+      "alignItems": "CENTER",
+      "flexWrap": "NOWRAP",
+      "gap": "NONE"
+    },
+    "children": [
+      "flex-layout.col#home"
+    ]
+  },  
+  "flex-layout.col#home": {
+    "props": {
+      "blockClass": "image-title-slider-column",
+      "flexLayout": "COLUMN",
+      "justifyContent": "CENTER",
+      "alignItems": "CENTER",
+      "flexWrap": "NOWRAP",
+      "gap": "NONE"
+    },
+    "children": [
+      "image-title-slider",
+      "rich-text#title-new-arrivals",
+      "image-hotspot-product#home",
+      "rich-text#moments",
+      "custom-image-grid"
+    ]
+  },
+  "image-title-slider": {
+    "props": {
+      "slides": [
+        {
+          "image": "https://via.placeholder.com/1200x400",
+          "title": "Colección Hombre"
+        },
+        {
+          "image": "https://via.placeholder.com/1200x400",
+          "title": "Colección Mujer"
+        }
+      ]
+    }
+  },
+  "rich-text#title-new-arrivals": {
+  "props": {
+    "textAlignment": "CENTER",
+    "textPosition": "CENTER",
+    "text": "NEW ARRIVALS",
+    "font": "t-heading-5",
+    "border": "BOTTOM",
+    "blockClass": "help-message"
+  }
+},
+
+  "image-hotspot-product#home": {
+    "props": {
+      "images": [
+        {
+          "imageDesktop": "https://yourcdn.com/banner-desktop.jpg",
+          "imageMobile": "https://yourcdn.com/banner-mobile.jpg",
+          "hotspots": [
+            {
+              "productId": "6342",
+              "x": 30,
+              "y": 45
+            },
+
+            {
+              "productId": "6346",
+              "x": 60,
+              "y": 50
+            }
+          ]
+
+        }
+      ]
+    }
+  },
+  "rich-text#moments": {
+    "props": {
       "textAlignment": "CENTER",
       "textPosition": "CENTER",
-      "font": "t-heading-1"
+      "text": "MOMENTS",
+      "font": "t-heading-5",
+      "border": "BOTTOM",
+      "blockClass": "help-message"
+    }
+  },
+  "custom-image-grid": {
+    "props": {
+      "items": [
+        {
+          "image": "https://via.placeholder.com/400x300.png?text=Producto+1",
+          "title": "Producto 1",
+          "description": "Descripción del producto 1",
+          "link": "/producto-1",
+          "date": "2025-12-20"
+        },
+        {
+          "image": "https://via.placeholder.com/400x300.png?text=Producto+2",
+          "title": "Producto 2",
+          "description": "Descripción del producto 2",
+          "link": "/producto-2",
+          "date": "2026-01-05"
+        },
+        {
+          "image": "https://via.placeholder.com/400x300.png?text=Producto+3",
+          "title": "Producto 3",
+          "description": "Descripción del producto 3",
+          "link": "/producto-3",
+          "date": "2025-12-27"
+        },
+        {
+          "image": "https://via.placeholder.com/400x300.png?text=Producto+4",
+          "title": "Producto 4",
+          "description": "Descripción del producto 4",
+          "link": "/producto-4",
+          "date": "2026-01-10"
+        }
+      ]
     }
   }
 }

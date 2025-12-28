@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+body,
+*{
+  font-family: 'Playfair Display', serif;
+}
+.sliderContainer {
+  width: 100%;
+  position: relative;
+}
+
+.dotsTop {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 16px;
+  margin: auto;
+  width: 100%;
+  position: absolute;
+  top: 5%;
+  z-index: 1;
+}
+
+.dotButton {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 500;
+  padding-bottom: 4px;
+  border: none;
+  color: #fff;
+  border-bottom: 2px solid transparent;
+}
+
+.dotButton.active {
+  border-color: #fff;
+}
+
+.sliderImageWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.sliderImage {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 1080px) {
+  .sliderContainer{
+    height: 430px;
+    overflow: hidden;
+  }
+  .sliderImage {
+    width: 100%;
+  }
+  .dotsBottom {
+    width: 100%;
+    position: absolute;
+    bottom: 1rem;
+    height: 20px;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .dotLine {
+    width: 20%;
+    display: block;
+    height: 5px;
+    background: #ffff;
+    border-radius: 5px;
+  }
+  .dotLine.active{
+    background: #4c2b08;
+  }
+  .sliderImageContainer{
+    width: 100%;
+  }
+
+}

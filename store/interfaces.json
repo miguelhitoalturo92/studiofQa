@@ -1,0 +1,17 @@
+{
+  "image-title-slider": {
+    "component": "ImageTitleSlider",
+    "allowed": "*",
+    "composition": "children"
+  },
+  "image-hotspot-product": {
+    "component": "ImageHotspotProduct",
+     "allowed": "*",
+    "composition": "children"
+  },
+  "custom-image-grid": {
+    "component": "CustomImageGrid",
+     "allowed": "*",
+    "composition": "children"
+  }
+}

@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+/* Aplicar a todo el sitio */
+
+
+/* Aplicar solo a títulos */    
+:global(.vtex-rich-text-0-x-paragraph--title-message){
+    font-family: 'Playfair Display', serif;
+    color: #000000;
+    border-bottom: 2px solid #000000;
+    font-size: 32px;
+}

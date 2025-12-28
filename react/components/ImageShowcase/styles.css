@@ -1,0 +1,72 @@
+.imageShowcase {
+  width: 100%;
+}
+
+/* Desktop: 2 filas x 5 imágenes */
+.desktopGridShowcase {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.desktopGridShowcase img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Mobile Slider: 2x2 */
+.mobileSlider {
+  display: none;
+  position: relative;
+}
+
+.mobileSlideGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.mobileSlideGrid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Slider controls */
+.sliderControlShowcase {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.sliderControlShowcase {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    position: absolute;
+    width: 100%;
+    top: 45%;
+  }
+
+.sliderButton {
+  background: #4c2b08;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 18px;
+}
+
+/* Responsive: mostrar slider solo en móvil */
+@media (max-width: 768px) {
+  .desktopGridShowcase {
+    display: none;
+  }
+  .mobileSlider {
+    display: block;
+  }
+}

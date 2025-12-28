@@ -1,0 +1,32 @@
+{
+  "image-title-slider": {
+    "component": "ImageTitleSlider",
+    "allowed": "*",
+    "composition": "children"
+  },
+  "image-hotspot-product": {
+    "component": "ImageHotspotProduct",
+    "allowed": "*",
+    "composition": "children"
+  },
+  "custom-image-grid": {
+    "component": "CustomImageGrid",
+    "allowed": "*",
+    "composition": "children"
+  },
+  "image-showcase": {
+    "component": "ImageShowcase",
+    "allowed": "*",
+    "composition": "children"
+  },
+  "banner-gallery": {
+    "component": "BannerGallery",
+    "allowed": "*",
+    "composition": "children"
+  },
+  "social-icons": {
+    "component": "SocialIcons",
+    "allowed": "*",
+    "composition": "children"
+  }
+}

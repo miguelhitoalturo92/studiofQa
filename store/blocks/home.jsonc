@@ -1,15 +1,242 @@
 {
-  "store.home": { 
-    "blocks": [
-      "rich-text"
+  "store.home": {
+    "blocks": ["flex-layout.row#home"]
+  },
+
+  "flex-layout.row#home": {
+    "props": {
+      "blockClass": "image-title-slider-row",
+      "flexLayout": "ROW",
+      "justifyContent": "CENTER",
+      "alignItems": "CENTER",
+      "flexWrap": "NOWRAP",
+      "gap": "NONE"
+    },
+    "children": ["flex-layout.col#home"]
+  },
+
+  "flex-layout.col#home": {
+    "props": {
+      "blockClass": "image-title-slider-column",
+      "flexLayout": "COLUMN",
+      "justifyContent": "CENTER",
+      "alignItems": "CENTER",
+      "flexWrap": "NOWRAP",
+      "gap": "NONE"
+    },
+    "children": [
+      "image-title-slider",
+      "rich-text#title-new-arrivals",
+      "image-hotspot-product#home",
+      // "slider-gallery",
+      "banner-gallery",
+      "rich-text#moments",
+      "custom-image-grid",
+      "rich-text#session-photos",
+      "image-showcase#home",
+      "social-icons#home"
     ]
   },
-  "rich-text": { 
-    "props": { 
-      "text": "VTEX Store Framework",
+
+  "image-title-slider": {
+    "props": {
+      "slides": [
+        {
+          "image": "https://via.placeholder.com/1200x400",
+          "title": "Colección Hombre"
+        },
+        {
+          "image": "https://via.placeholder.com/1200x400",
+          "title": "Colección Mujer"
+        }
+      ]
+    }
+  },
+
+  "rich-text#title-new-arrivals": {
+    "props": {
       "textAlignment": "CENTER",
       "textPosition": "CENTER",
-      "font": "t-heading-1"
+      "text": "NEW ARRIVALS",
+      "font": "t-heading-5",
+      "border": "BOTTOM",
+      "blockClass": "title-message"
+    }
+  },
+
+  "image-hotspot-product#home": {
+    "props": {
+      "images": [
+        {
+          "imageDesktop": "https://yourcdn.com/banner-desktop.jpg",
+          "imageMobile": "https://yourcdn.com/banner-mobile.jpg",
+          "hotspots": [
+            {
+              "productId": "6342",
+              "x": 30,
+              "y": 45
+            },
+            {
+              "productId": "6346",
+              "x": 60,
+              "y": 50
+            }
+          ]
+        }
+      ]
+    }
+  },
+
+  "rich-text#moments": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "MOMENTS",
+      "font": "t-heading-5",
+      "border": "BOTTOM",
+      "color": "#4c2b08",
+      "blockClass": "title-message"
+    }
+  },
+
+  "custom-image-grid": {
+    "props": {
+      "items": [
+        {
+          "image": "https://via.placeholder.com/400x300.png?text=Producto+1",
+          "title": "Producto 1",
+          "description": "Descripción del producto 1",
+          "link": "/producto-1",
+          "date": "2025-12-20"
+        },
+        {
+          "image": "https://via.placeholder.com/400x300.png?text=Producto+2",
+          "title": "Producto 2",
+          "description": "Descripción del producto 2",
+          "link": "/producto-2",
+          "date": "2026-01-05"
+        },
+        {
+          "image": "https://via.placeholder.com/400x300.png?text=Producto+3",
+          "title": "Producto 3",
+          "description": "Descripción del producto 3",
+          "link": "/producto-3",
+          "date": "2025-12-27"
+        },
+        {
+          "image": "https://via.placeholder.com/400x300.png?text=Producto+4",
+          "title": "Producto 4",
+          "description": "Descripción del producto 4",
+          "link": "/producto-4",
+          "date": "2026-01-10"
+        }
+      ]
+    }
+  },
+  "rich-text#session-photos": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "font": "t-heading-5",
+      "border": "BOTTOM",
+      "text": "SESSION PHOTOS",
+      "blockClass": "title-message"
+    }
+  },
+  "image-showcase#home": {
+    "props": {
+      "items": [
+        {
+          "image": "https://via.placeholder.com/300x300?text=Imagen+1",
+          "title": "Imagen 1",
+          "link": "/productos/1"
+        },
+        {
+          "image": "https://via.placeholder.com/300x300?text=Imagen+2",
+          "title": "Imagen 2",
+          "link": "/productos/2"
+        },
+        {
+          "image": "https://via.placeholder.com/300x300?text=Imagen+3",
+          "title": "Imagen 3",
+          "link": "/productos/3"
+        },
+        {
+          "image": "https://via.placeholder.com/300x300?text=Imagen+4",
+          "title": "Imagen 4",
+          "link": "/productos/4"
+        },
+        {
+          "image": "https://via.placeholder.com/300x300?text=Imagen+5",
+          "title": "Imagen 5",
+          "link": "/productos/5"
+        },
+        {
+          "image": "https://via.placeholder.com/300x300?text=Imagen+6",
+          "title": "Imagen 6",
+          "link": "/productos/6"
+        },
+        {
+          "image": "https://via.placeholder.com/300x300?text=Imagen+7",
+          "title": "Imagen 7",
+          "link": "/productos/7"
+        },
+        {
+          "image": "https://via.placeholder.com/300x300?text=Imagen+8",
+          "title": "Imagen 8",
+          "link": "/productos/8"
+        },
+        {
+          "image": "https://via.placeholder.com/300x300?text=Imagen+9",
+          "title": "Imagen 9",
+          "link": "/productos/9"
+        },
+        {
+          "image": "https://via.placeholder.com/300x300?text=Imagen+10",
+          "title": "Imagen 10",
+          "link": "/productos/10"
+        }
+      ]
+    }
+  },
+
+  "banner-gallery": {
+    "props": {
+      "banners": [
+        {
+          "image": "arquivos/banner1.jpg",
+          "title": "Guía de regalos",
+          "description": "Encuentra el regalo ideal",
+          "link": "/guia-de-regalos"
+        },
+        {
+          "image": "arquivos/banner2.jpg",
+          "title": "Full 25",
+          "description": "Nueva colección",
+          "link": "/colecciones"
+        }
+      ]
+    }
+  },
+  "social-icons#home": {
+    "props": {
+      "items": [
+        {
+          "name": "TikTok",
+          "url": "https://www.tiktok.com/@usuario",
+          "icon": "https://cdn-icons-png.flaticon.com/512/3046/3046122.png"
+        },
+        {
+          "name": "Instagram",
+          "url": "https://www.instagram.com/usuario",
+          "icon": "https://cdn-icons-png.flaticon.com/512/174/174855.png"
+        },
+        {
+          "name": "Facebook",
+          "url": "https://www.facebook.com/usuario",
+          "icon": "https://cdn-icons-png.flaticon.com/512/733/733547.png"
+        }
+      ]
     }
   }
 }
